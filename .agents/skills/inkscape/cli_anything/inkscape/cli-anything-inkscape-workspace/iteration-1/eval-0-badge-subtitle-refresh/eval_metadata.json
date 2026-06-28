@@ -1,0 +1,10 @@
+{
+  "eval_id": 0,
+  "eval_name": "badge-subtitle-refresh",
+  "prompt": "I have an existing SVG badge at evals/files/conference-badge.svg. Update the subtitle text from 'Design Systems Summit' to 'Design Systems Week', recolor the round icon to #f97316, and export both a revised SVG and a PNG preview. Keep the original source file unchanged and save a resumable project JSON too.",
+  "assertions": [
+    "The revised SVG contains the updated subtitle text 'Design Systems Week'.",
+    "The revised SVG uses fill '#f97316' for the imported badge icon.",
+    "The run saved a resumable project.inkscape-cli.json file."
+  ]
+}

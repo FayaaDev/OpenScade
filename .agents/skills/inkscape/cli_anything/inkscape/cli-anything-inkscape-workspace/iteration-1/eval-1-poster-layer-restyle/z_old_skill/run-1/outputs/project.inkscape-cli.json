@@ -1,0 +1,140 @@
+{
+  "document": {
+    "background": "none",
+    "height": 480,
+    "units": "px",
+    "viewBox": "0 0 800 480",
+    "width": 800
+  },
+  "gradients": [],
+  "layers": [
+    {
+      "id": "layer1",
+      "locked": false,
+      "name": "Layer 1",
+      "objects": [],
+      "opacity": 1.0,
+      "visible": true
+    },
+    {
+      "id": "base",
+      "locked": false,
+      "name": "base",
+      "objects": [
+        "poster-bg"
+      ],
+      "opacity": 1.0,
+      "visible": true
+    },
+    {
+      "id": "accent",
+      "locked": false,
+      "name": "accent",
+      "objects": [
+        "accent-bar"
+      ],
+      "opacity": 1.0,
+      "visible": true
+    },
+    {
+      "id": "content",
+      "locked": false,
+      "name": "content",
+      "objects": [
+        "headline",
+        "status-copy"
+      ],
+      "opacity": 1.0,
+      "visible": true
+    },
+    {
+      "id": "overlay",
+      "locked": false,
+      "name": "overlay",
+      "objects": [
+        "overlay-box"
+      ],
+      "opacity": 1.0,
+      "visible": false
+    }
+  ],
+  "metadata": {
+    "created": "2026-05-28T03:16:03.650284",
+    "modified": "2026-05-28T03:16:39.130166",
+    "software": "inkscape-cli 1.0"
+  },
+  "name": "release-poster",
+  "objects": [
+    {
+      "height": 480,
+      "id": "poster-bg",
+      "layer": "base",
+      "name": "poster-bg",
+      "style": "fill:#0f172a",
+      "transform": "",
+      "type": "rect",
+      "width": 800,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "height": 206,
+      "id": "accent-bar",
+      "layer": "accent",
+      "name": "accent-bar",
+      "style": "fill:#0f766e",
+      "transform": "",
+      "type": "rect",
+      "width": 20,
+      "x": 84,
+      "y": 118
+    },
+    {
+      "fill": "#f8fafc",
+      "font_family": "Inter",
+      "font_size": 54,
+      "font_style": "normal",
+      "font_weight": "700",
+      "id": "headline",
+      "layer": "content",
+      "name": "headline",
+      "style": "font-family:Inter;font-size:54px;font-weight:700;fill:#f8fafc",
+      "text": "Ship faster",
+      "text_anchor": "start",
+      "transform": "",
+      "type": "text",
+      "x": 138,
+      "y": 182
+    },
+    {
+      "fill": "#cbd5e1",
+      "font_family": "Inter",
+      "font_size": 28,
+      "font_style": "normal",
+      "font_weight": "normal",
+      "id": "status-copy",
+      "layer": "content",
+      "name": "status-copy",
+      "style": "font-family:Inter;font-size:28px;font-weight:normal;font-style:normal;fill:#cbd5e1;text-anchor:start",
+      "text": "Public release",
+      "text_anchor": "start",
+      "transform": "",
+      "type": "text",
+      "x": 140,
+      "y": 246
+    },
+    {
+      "height": 164,
+      "id": "overlay-box",
+      "layer": "overlay",
+      "name": "overlay-box",
+      "style": "fill:#ffffff;opacity:0.14",
+      "transform": "",
+      "type": "rect",
+      "width": 164,
+      "x": 560,
+      "y": 66
+    }
+  ],
+  "version": "1.0"
+}

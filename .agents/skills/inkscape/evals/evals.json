@@ -1,0 +1,44 @@
+{
+  "skill_name": "cli-anything-inkscape",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "I have an existing SVG badge at evals/files/conference-badge.svg. Update the subtitle text from 'Design Systems Summit' to 'Design Systems Week', recolor the round icon to #f97316, and export both a revised SVG and a PNG preview. Keep the original source file unchanged and save a resumable project JSON too.",
+      "expected_output": "A revised badge SVG and PNG preview with updated subtitle text and icon color, plus a saved editable project JSON.",
+      "expectations": [
+        "The revised SVG contains the updated subtitle text 'Design Systems Week'.",
+        "The revised SVG uses fill '#f97316' for the imported badge icon.",
+        "The run saved a resumable project.inkscape-cli.json file."
+      ],
+      "files": [
+        "evals/files/conference-badge.svg"
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "There's a layered SVG poster at evals/files/release-poster.svg. Hide the 'overlay' layer, change the orange accent bar to #0f766e, replace 'Beta access' with 'Public release', and export a revised SVG and PNG preview without overwriting the source.",
+      "expected_output": "A revised poster SVG and PNG preview with the overlay layer hidden, accent recolored, and text updated.",
+      "expectations": [
+        "The revised SVG contains the updated text 'Public release'.",
+        "The revised SVG uses fill '#0f766e' for the accent bar.",
+        "The exported SVG hides the overlay layer."
+      ],
+      "files": [
+        "evals/files/release-poster.svg"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Modify the SVG stat chip at evals/files/status-chip.svg. Change the label from 'Latency' to 'Throughput', move the value text slightly right so it stays centered visually, and export the updated SVG plus a PNG preview. Keep the work in the Inkscape CLI workflow instead of editing the XML directly.",
+      "expected_output": "An updated stat chip SVG and PNG preview with the new label and adjusted value placement.",
+      "expectations": [
+        "The revised SVG contains the updated label text 'Throughput'.",
+        "The saved project moves the value text to the right of its original x=44 position.",
+        "The run exported a non-empty PNG preview file."
+      ],
+      "files": [
+        "evals/files/status-chip.svg"
+      ]
+    }
+  ]
+}

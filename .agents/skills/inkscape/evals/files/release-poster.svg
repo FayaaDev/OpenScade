@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="800" height="480" viewBox="0 0 800 480">
+  <g id="base" inkscape:groupmode="layer" inkscape:label="base">
+    <rect id="poster-bg" x="0" y="0" width="800" height="480" fill="#0f172a" />
+  </g>
+  <g id="accent" inkscape:groupmode="layer" inkscape:label="accent">
+    <rect id="accent-bar" x="84" y="118" width="20" height="206" fill="#ea580c" />
+  </g>
+  <g id="content" inkscape:groupmode="layer" inkscape:label="content">
+    <text id="headline" x="138" y="182" style="font-family:Inter;font-size:54px;font-weight:700;fill:#f8fafc">Ship faster</text>
+    <text id="status-copy" x="140" y="246" style="font-family:Inter;font-size:28px;fill:#cbd5e1">Beta access</text>
+  </g>
+  <g id="overlay" inkscape:groupmode="layer" inkscape:label="overlay">
+    <rect id="overlay-box" x="560" y="66" width="164" height="164" fill="#ffffff" opacity="0.14" />
+  </g>
+</svg>

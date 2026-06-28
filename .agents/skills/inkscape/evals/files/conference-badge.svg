@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="640" height="360" viewBox="0 0 640 360">
+  <g id="background" inkscape:groupmode="layer" inkscape:label="background">
+    <rect id="badge-bg" x="0" y="0" width="640" height="360" fill="#fff7ed" />
+  </g>
+  <g id="content" inkscape:groupmode="layer" inkscape:label="content">
+    <circle id="badge-icon" cx="120" cy="116" r="54" fill="#2563eb" />
+    <text id="badge-title" x="200" y="102" style="font-family:Inter;font-size:42px;font-weight:700;fill:#111827">PHA Studio</text>
+    <text id="badge-subtitle" x="200" y="154" style="font-family:Inter;font-size:22px;fill:#374151">Design Systems Summit</text>
+  </g>
+</svg>

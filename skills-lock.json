@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "openscad": {
+      "source": "mitsuhiko/agent-stuff",
+      "sourceType": "github",
+      "skillPath": "skills/openscad/SKILL.md",
+      "computedHash": "12854481b74e734467be4de74ba11d360ca049b5de7c8dab7918c10ae3a20aa0"
+    }
+  }
+}

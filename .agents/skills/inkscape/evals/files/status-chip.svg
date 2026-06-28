@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="420" height="168" viewBox="0 0 420 168">
+  <g id="chip" inkscape:groupmode="layer" inkscape:label="chip">
+    <rect id="chip-bg" x="0" y="0" width="420" height="168" rx="26" ry="26" fill="#eff6ff" />
+    <text id="chip-label" x="44" y="68" style="font-family:Inter;font-size:24px;fill:#1d4ed8">Latency</text>
+    <text id="chip-value" x="44" y="124" style="font-family:Inter;font-size:46px;font-weight:700;fill:#0f172a">34ms</text>
+  </g>
+</svg>

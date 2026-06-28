@@ -1,0 +1,10 @@
+{
+  "eval_id": 2,
+  "eval_name": "status-chip-text-adjust",
+  "prompt": "Modify the SVG stat chip at evals/files/status-chip.svg. Change the label from 'Latency' to 'Throughput', move the value text slightly right so it stays centered visually, and export the updated SVG plus a PNG preview. Keep the work in the Inkscape CLI workflow instead of editing the XML directly.",
+  "assertions": [
+    "The revised SVG contains the updated label text 'Throughput'.",
+    "The saved project moves the value text to the right of its original x=44 position.",
+    "The run exported a non-empty PNG preview file."
+  ]
+}

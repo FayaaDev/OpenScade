@@ -1,0 +1,302 @@
+{
+  "metadata": {
+    "skill_name": "cli-anything-inkscape",
+    "skill_path": "/Users/fayaamini/projy/3d/inkscapeskill/agent-harness/cli_anything/inkscape/skills",
+    "executor_model": "<model-name>",
+    "analyzer_model": "<model-name>",
+    "timestamp": "2026-05-28T00:21:50Z",
+    "evals_run": [
+      0,
+      1,
+      2
+    ],
+    "runs_per_configuration": 3
+  },
+  "runs": [
+    {
+      "eval_id": 0,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 3,
+        "failed": 0,
+        "total": 3,
+        "time_seconds": 0.0,
+        "tokens": 13897,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "The revised SVG contains the updated subtitle text 'Design Systems Week'.",
+          "passed": true,
+          "evidence": "SVG text content: PHA StudioDesign Systems Week"
+        },
+        {
+          "text": "The revised SVG uses fill '#f97316' for the imported badge icon.",
+          "passed": true,
+          "evidence": "badge-icon fill is #f97316"
+        },
+        {
+          "text": "The run saved a resumable project.inkscape-cli.json file.",
+          "passed": true,
+          "evidence": "project file exists at project.inkscape-cli.json"
+        }
+      ],
+      "notes": [
+        "The source SVG used only simple supported features: layered groups, one circle, one rectangle, and plain text. No filters, masks, clip paths, or gradients were present.",
+        "The harness imported the artwork cleanly, so there is low visual fidelity risk for the requested subtitle change.",
+        "Two harness issues showed up during export:",
+        "The `style set-fill` command did not persist the icon recolor in the saved project JSON for this file, even though the CLI reported success.",
+        "PNG export failed while the document background was `none` because the raster renderer uses Pillow and rejected that background value.",
+        "To finish the task, the resumable project JSON was corrected minimally so it now records:",
+        "subtitle text: `Design Systems Week`",
+        "icon fill: `#f97316`",
+        "document background: `#fff7ed` for PNG export compatibility",
+        "Because of that background compatibility fix, the exported `revised.svg` includes an additional root-level background rectangle matching the existing badge background color. This does not change the visible design, but it is a structural difference from the source SVG."
+      ]
+    },
+    {
+      "eval_id": 1,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 3,
+        "failed": 0,
+        "total": 3,
+        "time_seconds": 0.0,
+        "tokens": 14503,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "The revised SVG contains the updated text 'Public release'.",
+          "passed": true,
+          "evidence": "SVG text content: Ship fasterPublic release"
+        },
+        {
+          "text": "The revised SVG uses fill '#0f766e' for the accent bar.",
+          "passed": true,
+          "evidence": "accent-bar fill is #0f766e"
+        },
+        {
+          "text": "The exported SVG hides the overlay layer.",
+          "passed": true,
+          "evidence": "overlay style is display:none"
+        }
+      ],
+      "notes": [
+        "The source SVG used only basic layers, rectangles, and text, so it fit the harness well.",
+        "No unsupported filters, masks, clip paths, or symbol-heavy constructs were detected in the source.",
+        "The harness PNG renderer could not initialize with the imported document background value `none`, so `preview.png` was exported with a background override of `#0f172a`.",
+        "This background override affects only the raster preview export. The revised SVG keeps the artwork structure and hidden overlay layer state from the project export.",
+        "The preview should be high fidelity for this file because the artwork is simple and fully covered by a dark background rectangle."
+      ]
+    },
+    {
+      "eval_id": 2,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 3,
+        "failed": 0,
+        "total": 3,
+        "time_seconds": 0.0,
+        "tokens": 9350,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "The revised SVG contains the updated label text 'Throughput'.",
+          "passed": true,
+          "evidence": "SVG text content: Throughput34ms"
+        },
+        {
+          "text": "The saved project moves the value text to the right of its original x=44 position.",
+          "passed": true,
+          "evidence": "chip-value x=44, transform=translate(10, 0)"
+        },
+        {
+          "text": "The run exported a non-empty PNG preview file.",
+          "passed": true,
+          "evidence": "preview.png size is 2007 bytes"
+        }
+      ],
+      "notes": [
+        "The label text was updated from `Latency` to `Throughput` using the Inkscape CLI project workflow, not by editing SVG XML directly.",
+        "The value text was moved slightly right with a `10px` translation to keep the layout visually balanced after the longer label change.",
+        "Uncertainty: the phrase \"slightly right\" is subjective; `10px` is a conservative nudge rather than a full re-layout.",
+        "Unsupported-feature risk is low for this asset. The source imports cleanly as a basic rect plus two text objects.",
+        "Fidelity note: the harness PNG exporter rejected the document background value `none`, so the preview was exported with an explicit white background override. The SVG itself remains exported from the project without manual XML edits."
+      ]
+    },
+    {
+      "eval_id": 0,
+      "configuration": "z_old_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 3,
+        "failed": 0,
+        "total": 3,
+        "time_seconds": 0.0,
+        "tokens": 12759,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "The revised SVG contains the updated subtitle text 'Design Systems Week'.",
+          "passed": true,
+          "evidence": "SVG text content: PHA StudioDesign Systems Week"
+        },
+        {
+          "text": "The revised SVG uses fill '#f97316' for the imported badge icon.",
+          "passed": true,
+          "evidence": "badge-icon fill is #f97316"
+        },
+        {
+          "text": "The run saved a resumable project.inkscape-cli.json file.",
+          "passed": true,
+          "evidence": "project file exists at project.inkscape-cli.json"
+        }
+      ],
+      "notes": [
+        "The source SVG was not modified. All edits were applied to a separate imported project JSON and exported to new files.",
+        "No unsupported SVG features were encountered in this badge file. The source only used a background rectangle, one circle, and two text nodes.",
+        "The PNG exporter failed on the imported project because `document.background` came in as `\"none\"` and this CLI's PNG path could not parse that color value.",
+        "To complete the preview export, I changed only the project JSON document background to `#fff7ed`, which matches the full-canvas background rectangle already present in the artwork. This should not materially change visual fidelity for this badge.",
+        "Text rendering fidelity still depends on local font availability. If `Inter` is missing on another machine, SVG or PNG text metrics could shift slightly."
+      ]
+    },
+    {
+      "eval_id": 1,
+      "configuration": "z_old_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 3,
+        "failed": 0,
+        "total": 3,
+        "time_seconds": 0.0,
+        "tokens": 13925,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "The revised SVG contains the updated text 'Public release'.",
+          "passed": true,
+          "evidence": "SVG text content: Ship fasterPublic release"
+        },
+        {
+          "text": "The revised SVG uses fill '#0f766e' for the accent bar.",
+          "passed": true,
+          "evidence": "accent-bar fill is #0f766e"
+        },
+        {
+          "text": "The exported SVG hides the overlay layer.",
+          "passed": true,
+          "evidence": "overlay style is display:none"
+        }
+      ],
+      "notes": [
+        "The older CLI snapshot path supplied in the task did not exist exactly as written. The available snapshot file used was `/Users/fayaamini/projy/3d/inkscapeskill/agent-harness/cli_anything/inkscape/cli-anything-inkscape-workspace/skill-snapshot/SKILL.md`.",
+        "The legacy PNG exporter failed on the imported document's `background: none` setting with `unknown color specifier: 'none'`. To complete the required PNG preview, the export was re-run with an explicit background of `#0f172a`, matching the visible poster background rectangle.",
+        "Fidelity risk is low for this file because the SVG is simple: one background rect, one accent rect, two text nodes, and one overlay rect.",
+        "The imported project added an empty `Layer 1` entry in the JSON project/exported SVG. It does not affect the requested visual change, but it is a minor structural difference from the source file."
+      ]
+    },
+    {
+      "eval_id": 2,
+      "configuration": "z_old_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 3,
+        "failed": 0,
+        "total": 3,
+        "time_seconds": 0.0,
+        "tokens": 9613,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "The revised SVG contains the updated label text 'Throughput'.",
+          "passed": true,
+          "evidence": "SVG text content: Throughput34ms"
+        },
+        {
+          "text": "The saved project moves the value text to the right of its original x=44 position.",
+          "passed": true,
+          "evidence": "chip-value x=58, transform=missing"
+        },
+        {
+          "text": "The run exported a non-empty PNG preview file.",
+          "passed": true,
+          "evidence": "preview.png size is 2011 bytes"
+        }
+      ],
+      "notes": [
+        "The source SVG imported cleanly as one rectangle and two text objects. I did not see filters, masks, clip paths, or other advanced SVG features that would raise major fidelity risk.",
+        "The value text was moved from `x=44` to `x=58` to keep it visually centered under the longer `Throughput` label. This is a small visual judgment, so a different offset could also be reasonable.",
+        "The harness PNG export failed when it inherited the imported document background value `none`. I worked around that by exporting the preview with `--background \"#ffffff\"`. The revised SVG keeps the imported project background as `none`.",
+        "The PNG preview comes from the harness renderer, so it is suitable as a quick layout check. For very high-fidelity text rendering comparisons, native Inkscape rasterization may still differ slightly depending on font availability and rendering behavior."
+      ]
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {
+        "mean": 1.0,
+        "stddev": 0.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "time_seconds": {
+        "mean": 0.0,
+        "stddev": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "tokens": {
+        "mean": 12583.3333,
+        "stddev": 2816.4947,
+        "min": 9350,
+        "max": 14503
+      }
+    },
+    "z_old_skill": {
+      "pass_rate": {
+        "mean": 1.0,
+        "stddev": 0.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "time_seconds": {
+        "mean": 0.0,
+        "stddev": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "tokens": {
+        "mean": 12099.0,
+        "stddev": 2230.4789,
+        "min": 9613,
+        "max": 13925
+      }
+    },
+    "delta": {
+      "pass_rate": "+0.00",
+      "time_seconds": "+0.0",
+      "tokens": "+484"
+    }
+  },
+  "notes": []
+}

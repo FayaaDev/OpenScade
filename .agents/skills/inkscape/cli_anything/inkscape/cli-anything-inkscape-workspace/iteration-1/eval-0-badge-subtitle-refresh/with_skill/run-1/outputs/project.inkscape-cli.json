@@ -1,0 +1,108 @@
+{
+  "document": {
+    "background": "#fff7ed",
+    "height": 360,
+    "units": "px",
+    "viewBox": "0 0 640 360",
+    "width": 640
+  },
+  "gradients": [],
+  "layers": [
+    {
+      "id": "layer1",
+      "locked": false,
+      "name": "Layer 1",
+      "objects": [],
+      "opacity": 1.0,
+      "visible": true
+    },
+    {
+      "id": "background",
+      "locked": false,
+      "name": "background",
+      "objects": [
+        "badge-bg"
+      ],
+      "opacity": 1.0,
+      "visible": true
+    },
+    {
+      "id": "content",
+      "locked": false,
+      "name": "content",
+      "objects": [
+        "badge-icon",
+        "badge-title",
+        "badge-subtitle"
+      ],
+      "opacity": 1.0,
+      "visible": true
+    }
+  ],
+  "metadata": {
+    "created": "2026-05-28T03:15:36.840480",
+    "modified": "2026-05-28T03:15:48.324023",
+    "software": "inkscape-cli 1.0"
+  },
+  "name": "conference-badge",
+  "objects": [
+    {
+      "height": 360,
+      "id": "badge-bg",
+      "layer": "background",
+      "name": "badge-bg",
+      "style": "fill:#fff7ed",
+      "transform": "",
+      "type": "rect",
+      "width": 640,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "cx": 120,
+      "cy": 116,
+      "id": "badge-icon",
+      "layer": "content",
+      "name": "badge-icon",
+      "r": 54,
+      "style": "fill:#f97316",
+      "transform": "",
+      "type": "circle"
+    },
+    {
+      "fill": "#111827",
+      "font_family": "Inter",
+      "font_size": 42,
+      "font_style": "normal",
+      "font_weight": "700",
+      "id": "badge-title",
+      "layer": "content",
+      "name": "badge-title",
+      "style": "font-family:Inter;font-size:42px;font-weight:700;fill:#111827",
+      "text": "PHA Studio",
+      "text_anchor": "start",
+      "transform": "",
+      "type": "text",
+      "x": 200,
+      "y": 102
+    },
+    {
+      "fill": "#374151",
+      "font_family": "Inter",
+      "font_size": 22,
+      "font_style": "normal",
+      "font_weight": "normal",
+      "id": "badge-subtitle",
+      "layer": "content",
+      "name": "badge-subtitle",
+      "style": "font-family:Inter;font-size:22px;font-weight:normal;font-style:normal;fill:#374151;text-anchor:start",
+      "text": "Design Systems Week",
+      "text_anchor": "start",
+      "transform": "",
+      "type": "text",
+      "x": 200,
+      "y": 154
+    }
+  ],
+  "version": "1.0"
+}

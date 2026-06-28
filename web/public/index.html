@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local Relief Workshop</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body data-theme="neutral">
+    <div class="shell">
+      <main class="app-shell">
+        <section class="hero panel" id="heroPanel">
+          <p class="eyebrow">Local Workshop</p>
+          <h1>Upload a PNG and get your 3d printer ready while we cook your STL.</h1>
+
+          <div class="upload-controls">
+            <label class="browse-button" for="fileInput">
+              <input id="fileInput" name="file" type="file" accept=".png,image/png" />
+              <span>Browse Files</span>
+            </label>
+            <p class="upload-note">
+              PNG only for now. One file per run, then choose Artwork or Technical Drawing.
+            </p>
+          </div>
+
+          <div class="hero-footer">
+            <div class="selected-file" id="selectedFile" hidden></div>
+            <p class="form-error" id="formError" role="alert"></p>
+          </div>
+
+          <div class="mood-strip" aria-hidden="true">
+            <article class="mood-card mood-card-artwork">
+              <span>Artwork</span>
+              <p>Ink, glow, trace, relief.</p>
+            </article>
+            <article class="mood-card mood-card-technicaldrawing">
+              <span>Technical Drawing</span>
+              <p>Blueprint, grid, rebuild, validate.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="run-layout hidden" id="runLayout">
+          <section class="panel run-summary">
+            <div class="summary-topline">
+              <p class="eyebrow">Processing Run</p>
+              <span class="status-chip" id="statusChip">Starting</span>
+            </div>
+
+            <h2 id="runHeadline">Preparing the workshop run.</h2>
+
+            <dl class="summary-grid">
+              <div>
+                <dt>File</dt>
+                <dd id="summaryFile">-</dd>
+              </div>
+              <div>
+                <dt>Pathway</dt>
+                <dd id="summaryPathway">-</dd>
+              </div>
+              <div>
+                <dt>Progress</dt>
+                <dd id="summaryProgress">0 / 0 complete</dd>
+              </div>
+              <div>
+                <dt>Run ID</dt>
+                <dd id="summarySession">Starting...</dd>
+              </div>
+            </dl>
+
+            <p class="summary-copy" id="summaryCopy">
+              Waiting for the deterministic pipeline to start.
+            </p>
+
+            <div class="result-card hidden" id="resultCard">
+              <p class="result-label" id="resultLabel">Handoff Ready</p>
+              <p class="result-text" id="resultText"></p>
+              <div class="result-actions">
+                <a
+                  class="viewer-link hidden"
+                  id="viewerLink"
+                  href="#"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Open CAD Viewer
+                </a>
+                <a class="secondary-button hidden" id="downloadLink" href="#" download>
+                  Download STL
+                </a>
+                <a class="secondary-button hidden" id="downloadCadLink" href="#" download>
+                  Download CAD Bundle
+                </a>
+              </div>
+            </div>
+
+            <button class="secondary-button hidden" id="startOverButton" type="button">
+              Start Over
+            </button>
+          </section>
+
+          <section class="panel stage-board">
+            <div class="stage-board-header">
+              <p class="eyebrow">Workflow Trace</p>
+              <p class="live-line" id="liveLine" aria-live="polite">
+                Awaiting stage updates.
+              </p>
+            </div>
+
+            <div class="stage-list" id="stageList"></div>
+          </section>
+        </section>
+      </main>
+    </div>
+
+    <dialog class="choice-dialog" id="choiceDialog">
+      <form method="dialog" class="choice-shell">
+        <div class="choice-header">
+          <p class="eyebrow">Classification</p>
+          <h2>Which path should this file follow?</h2>
+          <p id="choiceFileName">No file selected.</p>
+        </div>
+
+        <div class="choice-grid">
+          <button class="choice-card choice-card-artwork" type="button" data-pathway="artwork">
+            <strong>Artwork</strong>
+            <span>Use the traced relief workflow with cleanup and SVG handoff.</span>
+          </button>
+
+          <button
+            class="choice-card choice-card-technicaldrawing"
+            type="button"
+            data-pathway="technicaldrawing"
+            disabled
+            aria-disabled="true"
+          >
+            <strong>Technical Drawing</strong>
+            <span>Deterministic rebuild is not wired yet. Use Artwork for the fixed local pipeline.</span>
+          </button>
+        </div>
+
+        <menu class="choice-actions">
+          <button class="secondary-button" id="chooseAnotherButton" value="cancel" type="submit">
+            Choose Another File
+          </button>
+        </menu>
+      </form>
+    </dialog>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+  </html>

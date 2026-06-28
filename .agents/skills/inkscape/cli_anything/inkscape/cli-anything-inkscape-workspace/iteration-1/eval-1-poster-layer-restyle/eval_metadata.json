@@ -1,0 +1,10 @@
+{
+  "eval_id": 1,
+  "eval_name": "poster-layer-restyle",
+  "prompt": "There's a layered SVG poster at evals/files/release-poster.svg. Hide the 'overlay' layer, change the orange accent bar to #0f766e, replace 'Beta access' with 'Public release', and export a revised SVG and PNG preview without overwriting the source.",
+  "assertions": [
+    "The revised SVG contains the updated text 'Public release'.",
+    "The revised SVG uses fill '#0f766e' for the accent bar.",
+    "The exported SVG hides the overlay layer."
+  ]
+}
